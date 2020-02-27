@@ -1,6 +1,6 @@
 ﻿namespace IDED_Scripting_P1_202010_base.Logic
 {
-    public struct Position
+    public struct Position 
     {
         public int x;
         public int y;

@@ -1,7 +1,9 @@
 ﻿namespace IDED_Scripting_P1_202010_base.Logic
 {
-    public class Unit
+    public abstract class Unit      
     {
+       
+       
         public int BaseAtk { get; protected set; }
         public int BaseDef { get; protected set; }
         public int BaseSpd { get; protected set; }
@@ -21,22 +23,35 @@
 
         public EUnitClass UnitClass { get; protected set; }
 
-        public Unit(EUnitClass _unitClass, int _atk, int _def, int _spd, int _moveRange)
+        public Unit(EUnitClass _unitClass, int _atk, int _def, int _spd, int _moveRange,int _atkRange)
         {
             UnitClass = _unitClass;
             BaseAtk = _atk;
             BaseDef = _def;
             BaseSpd = _spd;
             MoveRange = _moveRange;
+            AtkRange = _atkRange;
         }
 
         public virtual bool Interact(Unit otherUnit)
         {
             return false;
+
+
         }
 
+
+        public virtual void Move()
+        {
+
+        }
         public virtual bool Interact(Prop prop) => false;
 
         public bool Move(Position targetPosition) => false;
+
+
+       
+
+
     }
 }

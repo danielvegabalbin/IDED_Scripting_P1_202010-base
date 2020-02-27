@@ -1,6 +1,6 @@
 ﻿namespace IDED_Scripting_P1_202010_base.Logic
 {
-    public struct Prop
+    public struct Prop 
     {
         public EPropType PropType { get; private set; }
 
