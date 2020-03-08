@@ -1,14 +1,12 @@
 ﻿namespace IDED_Scripting_P1_202010_base.Logic
 {
-    public struct Position 
+    public struct Position
     {
-        public int x;
-        public int y;
-
-        public Position(int _x, int _y)
+        public double positionX, positionY;
+        public Position(double positionX, double positionY)
         {
-            x = _x;
-            y = _y;
+            this.positionX = positionX;
+            this.positionY = positionY;
         }
     }
 }
